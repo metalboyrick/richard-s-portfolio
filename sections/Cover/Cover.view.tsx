@@ -7,8 +7,8 @@ const CoverView = () => {
     const { isDarkTheme } = useThemeContext();
 
     return (
-        <div className={css.container(isDarkTheme)}>
-            <div>Hello World</div>
+        <div id="cover" className={css.container(isDarkTheme)}>
+            <div>Cover</div>
         </div>
     );
 }

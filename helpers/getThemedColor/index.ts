@@ -2,7 +2,7 @@ import { Light, Dark } from '@/constants/colors';
 
 import type { ColorConst } from './types';
 
-const getColor = (colorType: string, isDarkTheme: boolean) : string => {
+const getThemedColor = (colorType: string, isDarkTheme: boolean) : string => {
     try {
         return isDarkTheme ? Dark[colorType as keyof ColorConst] : Light[colorType as keyof ColorConst];
     } 
@@ -11,4 +11,4 @@ const getColor = (colorType: string, isDarkTheme: boolean) : string => {
     }
 };
 
-export default getColor;
+export default getThemedColor;
