@@ -1,9 +1,9 @@
 import { css } from '@emotion/css';
 
-import * as color from '@/constants/colors';
+import getColor from '@/helpers/getColor';
 
 export const container = (darkTheme : boolean) =>  css`
-    color: ${darkTheme ? color.Dark.foreground : color.Light.foreground};
-    background: ${darkTheme ? color.Dark.background : color.Light.background};
+    color: ${getColor('foreground', darkTheme)};
+    background: ${getColor('background', darkTheme)};
     height: 100vh;
 `; 
