@@ -16,8 +16,6 @@ const NavigationView = () => {
     const [scrollY, setScrollY] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
 
-    const showShadow = scrollY > 0;
-
     useEffect(() => {
         const handleScroll = () => {
 
@@ -43,7 +41,7 @@ const NavigationView = () => {
             {
                 isVisible &&
                 (
-                    <div className={css.container(isDarkTheme, showShadow)}>
+                    <div className={css.container(isDarkTheme)}>
                         <Flex
                             justifyContent='space-between'
                             alignItems='center'

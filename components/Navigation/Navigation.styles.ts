@@ -3,7 +3,7 @@ import { css } from "@emotion/css";
 import getThemedColor from "@/helpers/getThemedColor";
 import hexToRGBA from "@/helpers/hexToRGBA";
 
-export const container = (darkTheme: boolean, showShadow: boolean) => css`
+export const container = (darkTheme: boolean) => css`
     @keyframes fadeIn {
         0% { top: -10%; }
         100% { top: 0; }
@@ -18,6 +18,8 @@ export const container = (darkTheme: boolean, showShadow: boolean) => css`
 
     animation: fadeIn;
     animation-duration: 0.5s;
+
+    z-index: 100;
 `;
 
 export const menu = css`
