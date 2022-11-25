@@ -29,7 +29,7 @@ const ExperienceCardView = ( props: ExperienceCardProps ) => {
                         <Flex 
                             key={index}
                             justifyContent="flex-start"
-                            alignItems="center"
+                            alignItems="flex-start"
                             className={css.descGroup}
                         >
                             <CaretRightFilled className={css.descBullet(isDarkTheme)}/>
