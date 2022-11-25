@@ -11,6 +11,7 @@ export const container = (darkTheme : boolean) =>  css`
 export const innerContainer = (darkTheme: boolean) =>  css`
     width: 100%;
     background: ${hexToRGBA(getThemedColor('primary', darkTheme), 0.25)}; 
+    padding-bottom: 64px;
 `;
 
 export const nestInnerContainer = css`

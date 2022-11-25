@@ -6,6 +6,8 @@ import { Light } from "@/constants/colors";
 
 export const container = css`
     position: relative;
+    margin: 100px auto;
+    
 `;
 
 export const imageContainer = css`
@@ -14,17 +16,17 @@ export const imageContainer = css`
 `;
 
 export const infoCard = (darkTheme: boolean) => css`
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     background: ${getThemedColor('background', darkTheme)};
-    width: 700px;
+    width: 600px;
     padding: 24px;
     border-radius: 24px;
     box-shadow: 11px 12px 33px rgba(0, 0, 0, 0.25);
 
-    position: relative;
-    left: 400px;
-    bottom: 50px;
+    position: absolute;
+    left: 256px;
+    bottom: -100px;
 `;
 
 export const infoTitle = css`

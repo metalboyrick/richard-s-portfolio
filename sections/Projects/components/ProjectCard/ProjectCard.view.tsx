@@ -29,9 +29,7 @@ const ProjectCardView = (props: ProjectCardProps) => {
     }
 
     return (
-        <div
-            className={css.container}
-        >
+        <div className={css.container}>
             <Image 
                 src={coverImg}
                 alt={coverAlt}

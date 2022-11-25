@@ -39,7 +39,8 @@ export const descBullet = (darkTheme: boolean) => css`
     margin-right: 12px;
 `
 export const descText = css`
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 300;
 `;
 
 export const ornament = (isRightSided: boolean) => css`
