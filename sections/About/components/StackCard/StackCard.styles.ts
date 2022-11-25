@@ -1,7 +1,6 @@
 import { css } from "@emotion/css";
 
 import { Light } from "@/constants/colors";
-import getThemedColor from "@/helpers/getThemedColor";
 import hexToRGBA from "@/helpers/hexToRGBA";
 
 export const card = (darkTheme: boolean) => css`
