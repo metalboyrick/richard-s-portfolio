@@ -1,6 +1,6 @@
 # Richard Sulisthio's Portfolio
 
-This is my portfolio page, currently not mobile-compatible.
+This is my portfolio page, currently not mobile-compatible. Supports dark theme.
 
 ## Running on Dev
 
