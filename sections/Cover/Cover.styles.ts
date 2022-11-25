@@ -19,6 +19,29 @@ export const strongText = (darkTheme : boolean) => css`
     color: ${getThemedColor('primary', darkTheme)};
 `;
 
+export const ctaContainer = css`
+
+@keyframes coverEntrance {
+        from {
+            left : -50px;
+            opacity: 0;
+        }
+
+        to {
+            left: 0px;
+            opacity: 1;
+        }
+    };
+
+    position: relative;
+
+    animation: coverEntrance;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+    font-size: 18px;
+`
+
 export const innerContainer = css`
 
     @keyframes coverEntrance {

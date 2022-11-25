@@ -1,6 +1,10 @@
 import { useThemeContext } from "@/context/ThemeContext";
 
+import redirectTo from "@/helpers/redirectTo";
+import { RESUME } from "@/constants/links";
+
 import Flex from "@/components/Flex";
+import Button from "@/components/Button";
 
 import * as css from './Cover.styles';
 
@@ -12,6 +16,7 @@ const CoverView = () => {
             <Flex
                 justifyContent="center"
                 alignItems="center"
+                direction="column"
                 className={css.container(isDarkTheme)}
             >
                 <div id="cover" className={css.innerContainer}>
@@ -22,6 +27,18 @@ const CoverView = () => {
                         currently <span className={css.strongText(isDarkTheme)}>solving problems</span> with my expertise in <span className={css.strongText(isDarkTheme)}>software engineering.</span>
                     </div>
                 </div>
+                <Flex
+                    className={css.ctaContainer}
+                >
+                    <Button
+                        type="primary"
+                        padding="12px 24px"
+                        margin="64px 32px"
+                        onClick={() => redirectTo(RESUME, true)}
+                    > 
+                       <strong>download resume</strong>
+                    </Button>
+                </Flex>
             </Flex>
     );
 }
