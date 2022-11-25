@@ -1,3 +1,5 @@
+import { DownloadOutlined } from "@ant-design/icons";
+
 import { useThemeContext } from "@/context/ThemeContext";
 
 import redirectTo from "@/helpers/redirectTo";
@@ -36,7 +38,8 @@ const CoverView = () => {
                         margin="64px 32px"
                         onClick={() => redirectTo(RESUME, true)}
                     > 
-                       <strong>download resume</strong>
+                       <DownloadOutlined marginWidth={16}/>
+                       <strong>{'  '}download resume.</strong>
                     </Button>
                 </Flex>
             </Flex>
