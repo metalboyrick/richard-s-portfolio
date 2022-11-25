@@ -8,7 +8,9 @@ const SectionHeaderView = ({ text }: SectionHeaderProps) => {
     const { isDarkTheme } = useThemeContext();
 
     return (
-        <h1 className={css.header(isDarkTheme)}>{text}</h1>
+        <div className={css.wrapper}>
+            <span className={css.header(isDarkTheme)}>{text}</span>
+        </div>
     );
 }
 

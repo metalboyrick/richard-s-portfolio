@@ -16,7 +16,7 @@ export const innerContainer = (darkTheme: boolean) => css`
 `;
 
 export const nestInnerContainer = css`
-    width: 60%;
+    width: 70%;
     margin: 128px 0;
 `;
 
@@ -36,7 +36,7 @@ export const description = (darkTheme: boolean) => css`
     font-size: 20px;
     font-weight: 300;
     margin:  24px 0 0 0;
-    padding: 0 0 24px 0;
+    padding: 12px 0 24px 0;
     border-bottom: 10.5px solid ${getThemedColor('primary', darkTheme)};
 `;
 

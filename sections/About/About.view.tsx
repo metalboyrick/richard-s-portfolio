@@ -24,6 +24,7 @@ const AboutView = () => {
             >
                 <Flex
                     className={css.nestInnerContainer}
+                    alignItems="center"
                 >
                     <Image 
                         src={rsProfile}
