@@ -19,7 +19,7 @@ export const PROJECTS = [
             },
             {
                 icon: 'figma' as LinkIcon,
-                URL: "https://www.figma.com/file/oTkEdfcXf14fGQlaqHb73y/Portfolio-V2?t=lKyVu5RlqEQhFgC7-1"
+                URL: "https://www.figma.com/file/H6wtMImyiDDZ0mKF0UXvqz/AniBrowse?t=Mq8Fu5dkCQPETjMK-1"
             },
             {
                 icon: 'link' as LinkIcon,
