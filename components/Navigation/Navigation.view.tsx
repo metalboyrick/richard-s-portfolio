@@ -85,7 +85,6 @@ const NavigationView = () => {
                                 isMobile ? <MenuOutlined onClick={() => setIsMobileMenuVisible(!isMobileMenuVisible)} /> : (
                                     <Flex
                                         className={css.menu}
-                                        direction="column"
                                         justifyContent='space-between'
                                         alignItems='center'
                                     >
