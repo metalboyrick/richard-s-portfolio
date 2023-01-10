@@ -26,9 +26,21 @@ export const menu = css`
     width: 45%;
 `;
 
+export const mobileMenu = css`
+    position: relative;
+    top: 24px;
+`;
+
 export const navLink = (darkTheme: boolean) => css`
     &:hover {
         color:  ${getThemedColor('primary', darkTheme)};
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px){
+        position: relative;
+        left: -42px;
+        width: 100vw;
+        padding: 16px 42px;
     }
 `;

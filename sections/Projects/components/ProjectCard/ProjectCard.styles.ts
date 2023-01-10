@@ -8,11 +8,21 @@ export const container = css`
     position: relative;
     margin: 100px auto;
     
+    @media screen and (max-width: 768px){
+        margin: 24px auto;
+    }
+
 `;
 
 export const imageContainer = css`
     width: 700px;
     height: auto;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        border-radius: 24px 24px 0 0;
+    }
+
 `;
 
 export const infoCard = (darkTheme: boolean) => css`
@@ -27,6 +37,20 @@ export const infoCard = (darkTheme: boolean) => css`
     position: absolute;
     left: 256px;
     bottom: -100px;
+
+    @media screen and (max-width: 768px) {
+
+        font-size: 14px;
+        width: 100%;
+        border-radius: 0 0 24px 24px;
+
+        position: relative;
+        left: 0;
+        top: 0px;
+
+        box-shadow: none;
+    
+    }
 `;
 
 export const infoTitle = css`
@@ -42,6 +66,12 @@ export const linkContainer = (darkTheme : boolean) => css`
     position: absolute;
     left: 20px;
     border-radius: 0 0 24px 24px;
+
+    @media screen and (max-width: 768px){
+        position: relative;
+        left: 0;        
+        border-radius: 0;
+    }
 `;
 
 export const icon = css`

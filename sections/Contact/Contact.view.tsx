@@ -16,10 +16,12 @@ import Button from "@/components/Button";
 
 import * as css from './Contact.styles';
 import rsLogoWhite from './assets/rs-logo-white.svg';
+import useMobile from "@/hooks/useMobile";
 
 const ContactView = () => {
 
     const { isDarkTheme } = useThemeContext();
+    const { isMobile } = useMobile();
 
     const contactList = [
         {
@@ -45,7 +47,7 @@ const ContactView = () => {
                 className={css.innerContainer}
             >
                 <SectionHeader text="get in touch." />
-                <h2>let&lsquo;s build awesome software together!</h2>
+                <h2 className={css.promptText}>let&lsquo;s build awesome software together!</h2>
                 <Button
                     type="primary"
                     onClick={() => redirectTo(MAIL, true)}
@@ -57,7 +59,7 @@ const ContactView = () => {
                         <span>Let&lsquo;s talk !</span>
                     </span>
                 </Button>
-                <h2>or, contact me via one of these</h2>
+                <h2 className={css.promptText}>or, contact me via one of these</h2>
                 <Flex
                     justifyContent="space-between"
                     className={css.linkBtnContainer}
@@ -71,7 +73,8 @@ const ContactView = () => {
                     }
                 </Flex>
             </Flex>
-            <Flex
+            {
+                !isMobile &&  <Flex
                 justifyContent="center"
                 className={css.footerContainer(isDarkTheme)}
             >
@@ -81,6 +84,8 @@ const ContactView = () => {
                     width={80}
                 />
             </Flex>
+            }
+
         </div>
     );
 }

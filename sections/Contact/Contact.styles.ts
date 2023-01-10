@@ -18,6 +18,10 @@ export const innerContainer = css`
     }
 `;
 
+export const promptText = css`
+    text-align: center;
+`;
+
 export const mailBtn = css`
     font-size: 24px;
 
@@ -29,6 +33,10 @@ export const mailBtn = css`
 
 export const linkBtnContainer = css`
     width: 30%;
+
+    @media screen and (max-width: 768px){
+        visibility: hidden;
+    }
 `;
 
 export const linkBtn = (darkTheme: boolean) => css`
@@ -47,6 +55,11 @@ export const linkBtn = (darkTheme: boolean) => css`
         cursor: pointer;
         background-color: ${getThemedColor('primary', darkTheme)};
         color: ${getThemedColor('foreground', true)};
+    }
+
+    @media screen and (max-width: 768px){
+        width: 60px;
+        height: 60px;
     }
 `;
 

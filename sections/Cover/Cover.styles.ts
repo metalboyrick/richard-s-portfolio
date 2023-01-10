@@ -11,12 +11,18 @@ export const container = (darkTheme : boolean) =>  css`
 export const secondaryText = css`
     font-size: 36px;
     font-weight: 300;
+    @media screen and (max-width: 768px){
+        font-size: 18px;
+    }
 `;
 
 export const strongText = (darkTheme : boolean) => css`
     font-size: 42px;
     font-weight: 800;
     color: ${getThemedColor('primary', darkTheme)};
+    @media screen and (max-width: 768px){
+        font-size: 22px;
+    }
 `;
 
 export const ctaContainer = css`

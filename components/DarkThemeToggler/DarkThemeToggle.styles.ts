@@ -21,6 +21,12 @@ export const container = (darkTheme: boolean) => css`
             color: ${getThemedColor('foreground', !darkTheme)} !important;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        bottom: 64px;
+        width: 40px;
+        height: 40px;
+    }
 `;
 
 export const bulbIcon = (darkTheme: boolean) => css`

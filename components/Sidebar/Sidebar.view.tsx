@@ -9,16 +9,18 @@ import { useThemeContext } from "@/context/ThemeContext";
 import { GITHUB_URL, LINKEDIN_URL, WHATSAPP, MAIL } from "@/constants/links";
 import Flex from "@/components/Flex";
 import redirectTo from "@/helpers/redirectTo";
+import useMobile from "@/hooks/useMobile";
 
 import * as css from './Sidebar.styles';
 
 const SidebarView = () => {
     
+    const { isMobile } = useMobile(); 
     const { isDarkTheme } = useThemeContext();
     
     return (
         <Flex
-            direction="column"
+            direction={isMobile ? "row" : "column"}
             justifyContent="space-between"
             className={css.container(isDarkTheme)}
         >

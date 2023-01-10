@@ -53,6 +53,7 @@ export const btnContainer = (
         border-color: ${btnAttributes[type].bgColor};
         border-width: 2px;
         border-radius: ${borderRadius};
+        text-align: center;
 
         &:hover {
             cursor: pointer;

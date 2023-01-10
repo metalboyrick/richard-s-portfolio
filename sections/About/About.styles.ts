@@ -26,10 +26,19 @@ export const profileImg = css`
     width: 40%;
     height: auto;
     margin-right: 36px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 24px;
+    }
 `;
 
 export const rightColumn = css`
     width: 60%;
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 `;
 
 export const description = (darkTheme: boolean) => css`

@@ -9,6 +9,10 @@ export const card = (darkTheme: boolean) => css`
     padding: 8px 12px ;
     border-radius: 16px;
     margin: 0 12px 12px 0;
+
+    @media screen and (max-width: 768px){
+        font-size: 16px;
+    }
 `;
 
 export const text = css`

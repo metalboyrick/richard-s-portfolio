@@ -12,11 +12,20 @@ export const wrapper = (isRightSided: boolean, darkTheme: boolean) => css`
         `border-right: 6px solid ${getThemedColor('primary', darkTheme)};`    
     }
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 16px;
+    }
 `
 
 export const role = css`
     font-size: 28px;
     font-weight: 700;
+
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 export const company = (darkTheme: boolean) => css`
@@ -28,6 +37,10 @@ export const date = (darkTheme: boolean) => css`
     font-style: italic;
     font-size: 24px;
     margin: 4px 0;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 `; 
 
 export const descGroup = css`
@@ -41,6 +54,10 @@ export const descBullet = (darkTheme: boolean) => css`
 export const descText = css`
     font-size: 20px;
     font-weight: 300;
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
 `;
 
 export const ornament = (isRightSided: boolean) => css`

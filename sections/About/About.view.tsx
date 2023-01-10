@@ -5,6 +5,8 @@ import { useThemeContext } from "@/context/ThemeContext";
 import Flex from "@/components/Flex";
 import SectionHeader from "@/components/SectionHeader";
 
+import useMobile from "@/hooks/useMobile";
+
 import rsProfile from './assets/rs-profile.png';
 import StackCard from "./components/StackCard";
 
@@ -14,6 +16,7 @@ import { STACKS } from "./About.constants";
 const AboutView = () => {
     
     const { isDarkTheme } = useThemeContext();
+    const { isMobile } = useMobile();
 
     return (
         <div id="about" className={css.container(isDarkTheme)}>
@@ -26,15 +29,21 @@ const AboutView = () => {
                     className={css.nestInnerContainer}
                     alignItems="center"
                 >
-                    <Image 
+                    {!isMobile && <Image 
                         src={rsProfile}
                         alt="richard sulisthio profile"
                         className={css.profileImg}
-                    />
+                    />}
+
                     <div
                         className={css.rightColumn}
                     >
                         <SectionHeader text="about me."/>
+                        {isMobile && <Image 
+                        src={rsProfile}
+                        alt="richard sulisthio profile"
+                        className={css.profileImg}
+                        />}
                         <div className={css.description(isDarkTheme)}>
                         Ex-Tokopedia and Tsinghua University - educated Software Engineer. Mainly dabbles in the front-end and UI/UX space. I have 1 year experience of delivering high-quality web-based applications. Let’s build outstanding software together !
                         </div>

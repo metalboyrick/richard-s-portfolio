@@ -7,11 +7,27 @@ import ExperienceCard from "./components/ExperienceCard";
 
 import * as css from './Experience.styles';
 import { EXPERIENCES } from "./Experience.constants";
+import useMobile from "@/hooks/useMobile";
 
 
 const ExperienceView = () => {
     
     const { isDarkTheme } = useThemeContext();
+    const { isMobile } = useMobile();
+
+    const renderExperiences = () => {
+        if(isMobile)
+            return (
+                EXPERIENCES.map((item, index) => {
+                    return <ExperienceCard key={index} {...item} isRightSided/>
+                } )
+            );
+        return (
+            EXPERIENCES.map((item, index) => {
+                return index % 2 === 0 ? <ExperienceCard key={index} {...item} /> : <ExperienceCard key={index} {...item} isRightSided/>
+            } )
+        );
+    } 
 
     return (
         <div id="experience" className={css.container(isDarkTheme)}>
@@ -26,9 +42,7 @@ const ExperienceView = () => {
                     className={css.contentContainer}
                 >
                     {
-                        EXPERIENCES.map((item, index) => {
-                            return index % 2 === 0 ? <ExperienceCard key={index} {...item} /> : <ExperienceCard key={index} {...item} isRightSided/>
-                        } )
+                        renderExperiences()
                     }
                 </Flex>
             </Flex>
