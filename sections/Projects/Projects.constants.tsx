@@ -1,4 +1,5 @@
 import projAnibrowse from './assets/proj-anibrowse.png';
+import projDroppin from './assets/proj-droppin.png';
 import projLoakampus from './assets/proj-loakampus.png';
 import projRenderer from './assets/proj-renderer.png';
 import projGoldberg from './assets/proj-goldberg.png';
@@ -7,6 +8,22 @@ import projRiot from './assets/proj-riot.png';
 import type { LinkIcon } from './types';
 
 export const PROJECTS = [
+    {
+        coverImg: projDroppin,
+        coverAlt: 'droppinprotocol',
+        title: <span>Droppin Protocol</span>,
+        description: <span>Built the frontend for Droppin Protocol. Droppin protocol provides an engagement layer to help track and gain insights from high quality engagement. Built with Next.js, React.js. This app is built on top of the Polygon network.</span>,
+        URLs: [
+            {
+                icon: 'github' as LinkIcon,
+                URL: "https://github.com/droppin2023/client"
+            },
+            {
+                icon: 'link' as LinkIcon,
+                URL: "https://droppinprotocol.com"
+            }
+        ]
+    },
     {
         coverImg: projAnibrowse,
         coverAlt: 'anibrowse',

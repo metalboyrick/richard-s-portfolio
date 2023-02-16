@@ -17,6 +17,7 @@ export const container = css`
 export const imageContainer = css`
     width: 700px;
     height: auto;
+    border-radius: 24px;
 
     @media screen and (max-width: 768px) {
         width: 100%;
